@@ -1,0 +1,35 @@
+{
+  "name": "ai-bullyshield",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI BullyShield powered by EmoSpace — Protection + Healing = Complete Digital Safety",
+  "workspaces": [
+    "packages/shared",
+    "apps/api",
+    "apps/extension",
+    "apps/dashboard"
+  ],
+  "scripts": {
+    "dev:api": "cd apps/api && npm run dev",
+    "dev:dashboard": "cd apps/dashboard && npm run dev",
+    "dev:extension": "cd apps/extension && npm run dev",
+    "build:api": "cd apps/api && npm run build",
+    "build:dashboard": "cd apps/dashboard && npm run build",
+    "build:extension": "cd apps/extension && npm run build",
+    "build:all": "npm run build:shared && npm run build:api && npm run build:extension && npm run build:dashboard",
+    "build:shared": "cd packages/shared && npm run build",
+    "test": "npm run test:shared && npm run test:api && npm run test:extension && npm run test:dashboard",
+    "test:shared": "cd packages/shared && npm run test",
+    "test:api": "cd apps/api && npm run test",
+    "test:extension": "cd apps/extension && npm run test",
+    "test:dashboard": "cd apps/dashboard && npm run test",
+    "lint": "npm run lint:api && npm run lint:extension && npm run lint:dashboard",
+    "lint:api": "cd apps/api && npm run lint",
+    "lint:extension": "cd apps/extension && npm run lint",
+    "lint:dashboard": "cd apps/dashboard && npm run lint",
+    "setup": "npm install && npm run build:shared"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

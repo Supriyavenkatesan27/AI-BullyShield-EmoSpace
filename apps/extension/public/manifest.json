@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "AI BullyShield powered by EmoSpace",
+  "version": "1.0.0",
+  "description": "Protection + Healing = Complete Digital Safety. Detect cyberbullying, get safe reply suggestions, and access emotional support.",
+  "permissions": [
+    "contextMenus",
+    "storage"
+  ],
+  "host_permissions": ["http://localhost:3001/*"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
